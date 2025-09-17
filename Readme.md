@@ -96,51 +96,7 @@ uvicorn main:app --reload
 ```
 ## 📁 Project Structure
 
-project-root/
-│
-├── agents/
-│   └── summary_agent.py
-│
-├── agentsenv/
-│
-├── endpoints/
-│   ├── health.py
-│   ├── logs.py
-│   ├── summary.py
-│   ├── transcript_clean.py
-│   └── transcript_upload.py
-│
-├── logs/
-│   └── file_metadata.json
-│
-├── schemas/
-│   └── schema.py
-│
-├── screenshots/
-│
-├── services/
-│   └── file_processing/
-│       ├── clean_text.py
-│       └── file_to_text.py
-│
-├── models/
-│   ├── summary_model.py
-│   ├── config.py
-│   ├── file_to_text_model.py
-│   ├── graph.py
-│   ├── text_cleaner.py
-│   └── tools.py
-│
-├── utils/
-│
-├── web/
-│
-├── .env
-├── main.py
-├── Emerging Technology.docx
-├── Readme.md
-├── Dockerfile
-└── docker-compose.yml
+![alt text](screenshots/workflow.png)
 
 
 **⚠️Note:** Due to time constraint, Iconstraints, I could not complete:
