@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  fastapi:
+    build: .
+    container_name: fastapi_app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount main app directories
+      - ./agents:/app/agents
+      - ./endpoints:/app/endpoints
+      - ./schemas:/app/schemas
+      - ./services:/app/services
+      - ./utils:/app/utils
+      - ./web:/app/web
+      
+      # Mount logs (to persist metadata.json outside container)
+      - ./logs:/app/logs
+
+      # Mount main.py and docs
+      - ./main.py:/app/main.py
+      - ./Readme.md:/app/Readme.md
+      - ./Emerging Technology.docx:/app/Emerging Technology.docx
+
+    restart: unless-stopped
+    env_file:
+      - .env

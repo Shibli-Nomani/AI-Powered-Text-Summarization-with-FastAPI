@@ -1,0 +1,9 @@
+.env
+agentsenv
+/agentsenv
+__pycache__
+.vscode
+*.pyc
+
+.DS_Store
+
