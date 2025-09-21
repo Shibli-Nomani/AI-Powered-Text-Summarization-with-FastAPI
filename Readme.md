@@ -89,7 +89,14 @@ nano endpoints/health.py
 ```
 ## 💡 Prepare Endpoints and main.py
 
-
+#### Pyshell command for python
+```sh
+pyenv shell 3.10.8 
+```
+#### Run main.py
+```sh
+python main.py
+```
 #### 🚀 Run FastAPI App (main.py)
 ```sh
 uvicorn main:app --reload
@@ -119,13 +126,38 @@ These require additional research and time to integrate.
 Go to Ubuntu Terminal and apply those command.
 ![alt text](screenshots/image-01.png)
 
+#### Build Docker with Docker Compose
+```sh
+docker-compose up --build
+```
+#### To reopen Docker after down the docker
+```sh
+docker-compose up 
+```
+
+#### To see conatiner info
+```sh
+docker ps
+```
+#### To stop container use container ID
+```sh
+docker stop
+```
+#### To remove cache after deleting docker image and container
+```sh
+docker system prune
+
+```
+##### To deploy docker image in AWS  / VM
+
+
 ```sh
 docker build -t ai-powered-text-summarization . 
 ```
-``
 ```sh
 docker run -d -p 8000:8000 ai-powered-text-summarization
 ```
+
 ## 📤 Output Results
 
 ### 🧑‍⚕️ Health  
