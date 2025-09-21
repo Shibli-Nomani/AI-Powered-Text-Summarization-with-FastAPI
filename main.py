@@ -12,7 +12,7 @@ from endpoints.summary import router as summary_router
 #from endpoints.query import router as query_router
 
 # Initialize FastAPI app
-app = FastAPI(title="AI-Powered Multi-Agent Video Transcript Summarization and Q&A Chatbot")        
+app = FastAPI(title="AI-Powered DOC and PDF Transcript Summarization and Q&A Chatbot")        
 
 # Register all routers
 app.include_router(health_router, prefix="/health", tags=["Health"])
@@ -28,7 +28,7 @@ def read_root():
 
 
 if __name__ == "__main__":
-    unicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
 
 

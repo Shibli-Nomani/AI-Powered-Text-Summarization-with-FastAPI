@@ -89,7 +89,14 @@ nano endpoints/health.py
 ```
 ## 💡 Prepare Endpoints and main.py
 
-
+#### Pyshell command for python
+```sh
+pyenv shell 3.10.8 
+```
+#### Run main.py
+```sh
+python main.py
+```
 #### 🚀 Run FastAPI App (main.py)
 ```sh
 uvicorn main:app --reload
@@ -122,10 +129,31 @@ Go to Ubuntu Terminal and apply those command.
 ```sh
 docker build -t ai-powered-text-summarization . 
 ```
-``
 ```sh
 docker run -d -p 8000:8000 ai-powered-text-summarization
 ```
+# To see conatiner info
+```sh
+docker ps
+```
+# To stop container use container ID
+```sh
+docker stop
+```
+# To remove cache after deleting docker image and container
+```sh
+docker system prune
+
+```
+
+1. --name fastapi_app → Container name
+2. --ai-powered-text-summarization → Image name
+
+| Item          | Purpose                                   | Example                         |
+| ------------- | ----------------------------------------- | ------------------------------- |
+| **Image**     | Like a class (a template/blueprint)       | `ai-powered-text-summarization` |
+| **Container** | Like an object (an instance of the image) | `fastapi_app`                   |
+
 ## 📤 Output Results
 
 ### 🧑‍⚕️ Health  
