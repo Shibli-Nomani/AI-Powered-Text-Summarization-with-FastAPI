@@ -126,33 +126,37 @@ These require additional research and time to integrate.
 Go to Ubuntu Terminal and apply those command.
 ![alt text](screenshots/image-01.png)
 
+#### Build Docker with Docker Compose
+```sh
+docker-compose up --build
+```
+#### To reopen Docker after down the docker
+```sh
+docker-compose up 
+```
+
+#### To see conatiner info
+```sh
+docker ps
+```
+#### To stop container use container ID
+```sh
+docker stop
+```
+#### To remove cache after deleting docker image and container
+```sh
+docker system prune
+
+```
+##### To deploy docker image in AWS  / VM
+
+
 ```sh
 docker build -t ai-powered-text-summarization . 
 ```
 ```sh
 docker run -d -p 8000:8000 ai-powered-text-summarization
 ```
-# To see conatiner info
-```sh
-docker ps
-```
-# To stop container use container ID
-```sh
-docker stop
-```
-# To remove cache after deleting docker image and container
-```sh
-docker system prune
-
-```
-
-1. --name fastapi_app → Container name
-2. --ai-powered-text-summarization → Image name
-
-| Item          | Purpose                                   | Example                         |
-| ------------- | ----------------------------------------- | ------------------------------- |
-| **Image**     | Like a class (a template/blueprint)       | `ai-powered-text-summarization` |
-| **Container** | Like an object (an instance of the image) | `fastapi_app`                   |
 
 ## 📤 Output Results
 
